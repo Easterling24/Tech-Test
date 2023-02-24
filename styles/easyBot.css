@@ -7,6 +7,7 @@ body {
 }
 
 section {
+	margin: 10% auto;
 	text-align: center;
 	font-family: 'Kanit', sans-serif;
 }
