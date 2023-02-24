@@ -1,0 +1,162 @@
+html {
+	@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+}
+
+body {
+	background-color: #283540;
+}
+
+section {
+	text-align: center;
+	font-family: 'Kanit', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	transition: all 300ms ease-in-out;
+}
+a:hover {
+	color: #08a7ff;
+	transition: all 300ms ease-in-out;
+}
+.title {
+	margin-top: 5%;
+	font-size: 40px;
+	color: #b0f6bc;
+	margin-bottom: 0;
+}
+
+.current-state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#result {
+	color: white;
+	font-size: 20px;
+	margin-bottom: 1rem;
+}
+
+.container {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	width: 306px;
+	margin: 25px auto;
+	background-color: #201f20;
+	color: #ffca51;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.game-cell {
+	height: 100px;
+	width: 100px;
+	border: 1px solid #ffca51;
+	display: flex;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	font-weight: 800;
+	background-color: #211d12;
+	transition: 300ms all ease-in-out;
+}
+
+/****** Removing Borders *******/
+
+.game-cell:nth-child(1) {
+	border-left: none;
+	border-top: none;
+	border-radius: 0 5px 0 0px;
+}
+.game-cell:nth-child(2) {
+	border-top: none;
+}
+.game-cell:nth-child(3) {
+	border-right: none;
+	border-top: none;
+}
+.game-cell:nth-child(4) {
+	border-left: none;
+}
+.game-cell:nth-child(6) {
+	border-right: none;
+}
+.game-cell:nth-child(7) {
+	border-left: none;
+	border-bottom: none;
+}
+.game-cell:nth-child(8) {
+	border-bottom: none;
+}
+.game-cell:nth-child(9) {
+	border-right: none;
+	border-bottom: none;
+}
+
+.game-cell:hover {
+	transition: all 300ms ease-in-out;
+	background-color: #3a4751;
+	cursor: pointer;
+}
+
+.cross::before {
+	content: "X";
+	color: #b0f6bc;
+}
+.zero::before {
+	content: "O";
+	color: #3393ff;
+}
+
+#restart-btn {
+	padding: 15px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 1;
+	color: #000;
+	font-size: 15px;
+	font-weight: bold;
+	transition-duration: 300ms;
+	position: relative;
+}
+
+#restart-btn:hover {
+	color: #08a7ff;
+}
+#restart-btn:before {
+	content: "";
+	position: absolute;
+	background: #383736;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 100%;
+	z-index: -1;
+	-webkit-transition: top 0.09s ease-in;
+}
+
+#restart-btn:hover::before {
+	top: 0;
+}
+
+.blink::before {
+	animation: blink 1s linear infinite;
+}
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}

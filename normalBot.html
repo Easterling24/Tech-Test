@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/easyBot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>XO Game</title>
+</head>
+
+<body>
+    <section>
+        <h1 class="title">Крестики Нолики</h1>
+        <div class="current-state">
+            <h2 id="game-status"></h2>
+            <div id="result"></div>
+            <button id="restart-btn">Новая игра</button>
+        </div>
+        <div class="container">
+            <div data-cell="0" class="game-cell"><span></span></div>
+            <div data-cell="1" class="game-cell"></div>
+            <div data-cell="2" class="game-cell"></div>
+            <div data-cell="3" class="game-cell"></div>
+            <div data-cell="4" class="game-cell"></div>
+            <div data-cell="5" class="game-cell"></div>
+            <div data-cell="6" class="game-cell"></div>
+            <div data-cell="7" class="game-cell"></div>
+            <div data-cell="8" class="game-cell"></div>
+        </div>
+        <a href="./index.html">Обратно в главное меню</a>
+    </section>
+    <script src="./js/simpleBot.js"></script>
+</body>
+
+</html>
