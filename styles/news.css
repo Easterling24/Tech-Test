@@ -1,0 +1,179 @@
+body {
+	background-color: #283540;
+	@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+	font-family: 'Kanit', sans-serif;
+}
+
+section {
+	margin: 20% auto;
+	text-align: center;
+}
+
+section a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#add-news-btn {
+	padding: 15px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 1;
+	color: #000;
+	font-size: 15px;
+	font-weight: bold;
+	transition-duration: 300ms;
+	position: relative;
+}
+
+#add-news-btn:hover {
+	color: #08a7ff;
+}
+#add-news-btn:before {
+	content: "";
+	position: absolute;
+	background: #383736;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 100%;
+	z-index: -1;
+	-webkit-transition: top 0.09s ease-in;
+}
+
+#main-container {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	color: aliceblue;
+}
+
+th {
+	padding: 15px;
+	background-color: #445a98;
+	color: #fff;
+}
+td {
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+
+h1 {
+	color: white;
+}
+
+#form-wrapper {
+	margin-bottom: 1rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#add-news-btn {
+	margin-bottom: 1rem;
+}
+
+#form-wrapper form {
+	display: none;
+	justify-content: space-between;
+	color: #fff;
+}
+#form-wrapper input {
+	padding: 8px;
+	outline: none;
+	border-radius: 5px;
+	border: 3px solid transparent;
+}
+
+#form-wrapper .input-container {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	margin-bottom: 1rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 600px;
+}
+
+form label {
+	margin-bottom: 0.3rem;
+}
+
+form button {
+	max-width: 100px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.form-section-1 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.form-section-1 input {
+	width: 100%;
+}
+
+#reason {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	padding: 0;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-content: baseline;
+	width: 350px;
+}
+
+#form-wrapper input[input-error="true"] {
+	border: 3px solid red;
+}
+
+@media screen and (max-width: 560px) {
+	#main-container {
+		align-items: unset;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	#add-news-btn {
+		padding: 8px;
+		font-size: 12px;
+	}
+
+	th,
+	td {
+		font-size: 15px;
+		white-space: pre-wrap;
+		word-wrap: anywhere;
+	}
+
+	td{
+		font-size: 12px;
+	}
+}

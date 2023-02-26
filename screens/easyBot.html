@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/easyBot.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>XO Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Тестовое Задание</title>
 </head>
 
 <body>
-    <section>
+
+    <header class="header-sticky">
+        <ul>
+            <li><a href="#game-wrapper">Игра</a></li>
+            <li><a href="#news-list-wrapper"> Новости</a></li>
+            <li><a href="#comparison-wrapper"> Сравнение</a></li>
+            <li><a href="#comparison-wrapper"> Анализ страници</a></li>
+
+         
+        </ul>
+    </header>
+    <section id="game-wrapper">
         <div class="current-state">
             <h2 id="game-status"></h2>
             <div id="result"></div>
@@ -28,9 +40,84 @@
             <div data-cell="7" class="game-cell"></div>
             <div data-cell="8" class="game-cell"></div>
         </div>
-        <a href="../index.html">Обратно в главное меню</a>
     </section>
-    <script src="./js/simpleBot.js"></script>
+
+
+    <section id="news-list-wrapper">
+
+        <h1>Список новостей</h1>
+
+
+        <div id="form-wrapper">
+            <button id="add-news-btn"></button>
+
+            <form>
+                <div class="input-wrapper">
+                    <div class="form-section-1">
+                        <div class="input-container">
+                            <label for="link">Ссылка</label>
+                            <input id="link" type="text" />
+
+                        </div>
+                        <div class="input-container">
+                            <label for="link">Для какой задачи?</label>
+                            <input id="text" type="text" maxlength="150" />
+
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <label for="link">Формат подачи информации?</label>
+                        <input id="reason" type="text" maxlength="255" />
+
+                    </div>
+                    <button> Сохранить </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="main-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ссылка</th>
+                        <th>Для какой задачи?</th>
+                        <th>Формат подачи информации</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="comparison-wrapper">
+
+
+        <main class="text-container">
+            <div class="left-wing">
+
+            
+
+                Статья 2020 кажется слишком грубой в своем оформлении, начальная часть не дает понять какие обновления были сделаны кроме как bullet point элементов. 
+                Далее пользователю предстоит покрыть слишком много контента что скорее всего заставит его уйти со страницы так и не прочитав желаемого
+          
+            </div>
+            <div class="right-wing">
+                Статья 2022 представляет удобный интерфейс. Сразу дает главную информацию про изменения. 
+                Далее, пользователю предстоит удобным скролить меньше контента благодаря секциям коллапса, 
+                которые могут быть развернутыми при желании. Что касается видео материала, то его можно переставить 
+                в конец секции так как берет немало места и скорее всего не будет вызывать желание к просмотру 
+                В заключение, версия этой страницы имеет ощутимые улучшения   
+            </div>
+        </main>
+
+    </section>
+
+    <section id="page-review-wrapper">
+
+
+    </section>
+    <script src="../js/simpleBot.js"></script>
+    <script src="../js/news.js"></script>
 </body>
 
 </html>

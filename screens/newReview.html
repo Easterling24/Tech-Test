@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/news.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+
+    
+    <h1>Список новостей</h1>
+
+
+    <div id="form-wrapper">
+      <button id="add-news-btn"></button>
+
+      <form>
+        <div class="input-wrapper">
+          <div class="form-section-1">
+            <div class="input-container">
+              <label for="link">Ссылка</label>
+              <input id="link" type="text" />
+
+            </div>
+            <div class="input-container">
+              <label for="link">Для какой задачи?</label>
+              <input id="text" type="text" maxlength="150" />
+
+            </div>
+          </div>
+          <div class="input-container">
+            <label for="link">Формат подачи информации?</label>
+            <input id="reason" type="text" maxlength="255" />
+
+          </div>
+          <button> Сохранить </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="main-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Ссылка</th>
+            <th>Для какой задачи?</th>
+            <th>Формат подачи информации</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="/js/news.js"></script>
+</body>
+
+</html>
