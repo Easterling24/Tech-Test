@@ -22,8 +22,6 @@ header {
 	align-items: center;
 }
 
-
-
 header ul {
 	display: flex;
 	justify-content: space-between;
@@ -40,11 +38,9 @@ header ul li a {
 }
 
 @media screen and (max-width: 560px) {
-
 	header ul li a {
 		font-size: 12px;
 	}
-	
 }
 #game-wrapper {
 	text-align: center;
@@ -408,8 +404,6 @@ form button {
 	background-color: #23263f;
 	border-radius: 4px;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
-	inline-size: 15px;
 	overflow-wrap: break-word;
 	padding: 2rem;
 	color: #fff;
@@ -418,7 +412,7 @@ form button {
 	line-height: 1.5rem;
 }
 
-.left-wing:hover{
+.left-wing:hover {
 	transition: 150ms ease-in-out;
 	opacity: 1;
 }
@@ -437,41 +431,48 @@ form button {
 	line-height: 1.5rem;
 }
 
-.right-wing:hover{
+.right-wing:hover {
 	transition: 150ms ease-in-out;
 	opacity: 1;
-
 }
 
-
 @media screen and (max-width: 560px) {
-
-	.text-container{
+	.text-container {
 		display: flex;
 		flex-direction: column;
 	}
-	.left-wing{
+	.left-wing {
 		inline-size: auto;
 		margin-bottom: 1rem;
 	}
 
 	.right-wing {
 		margin-left: 0;
-		
 	}
 
-	.left-wing, .right-wing{
+	.left-wing,
+	.right-wing {
 		padding: 0.5rem;
 		opacity: 1;
 	}
-	
-
 }
 
 /****************** Page Review ************************/
 
-.page-review-wrapper{
+#page-review-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #505e5f;
+	padding: 4rem 0;
+}
 
-
-
+.main-container {
+	width: 80%;
+	overflow-wrap: break-word;
+	color: white;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	line-height: 1.5rem;
+	padding: 8px;
 }
