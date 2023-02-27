@@ -26,19 +26,14 @@ class News {
 				reason: "Краткое и понятное описание"
 		},
 			{
-				link: "https://www.bhvr.com/dead-by-daylight-partners-with-titan-comics-to-release-first-comic-book/", 
-				text: "Спровоцировать интерес сообщества игры",
-				reason: "Краткое описание уже знакомого сюжета"
+				link: "https://gamerant.com/video-game-release-dates-2023-new-upcoming/", 
+				text: "Уведомить игроков про грядущие игры и даты их выхода",
+				reason: "Список игр и дат"
 		},
 			{
-				link: "https://www.bhvr.com/dead-by-daylight-partners-with-titan-comics-to-release-first-comic-book/", 
-				text: "Спровоцировать интерес сообщества игры",
-				reason: "Краткое описание уже знакомого сюжета"
-		},
-			{
-				link: "https://www.bhvr.com/dead-by-daylight-partners-with-titan-comics-to-release-first-comic-book/", 
-				text: "Спровоцировать интерес сообщества игры",
-				reason: "Краткое описание уже знакомого сюжета"
+				link: "https://gamerant.com/escape-from-tarkov-cheaters-60-percent-matches/", 
+				text: "Выявление проблем в игре",
+				reason: "Ссылка на источники"
 		}
 		]
 
@@ -61,7 +56,7 @@ class News {
 		let res = items
 			.map((item, index) => {
 				return `<tr>
-			<td> <a href=${item.lin}>${item.link} </a></td>
+			<td> <a href=${item.link}>${item.link} </a></td>
 			<td >${item.text}</td>
 			<td >${item.reason}</td>
 		</tr>`;
