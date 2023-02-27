@@ -1,27 +1,58 @@
 class News {
 	constructor() {
-		this.container = document.getElementById('add-news-btn');
-		this.container.innerText = 'Добавить новость';
+		// this.container = document.getElementById('add-news-btn');
+		// this.container.innerText = 'Добавить новость';
 		this.formWrapper = document.getElementById('form-wrapper');
 		this.mainContainer = document.getElementById('main-container');
 		this.newsList = localStorage.getItem('news') ? JSON.parse(localStorage.getItem('news')) : [];
-		this.addNewsBtn = document.getElementById('add-news-btn');
+		// this.addNewsBtn = document.getElementById('add-news-btn');
 		this.link = document.getElementById('link');
 		this.text = document.getElementById('text');
 		this.reason = document.getElementById('reason');
 		this.counter = 0;
 		this.formElement = document.querySelector('form');
 		this.tableBody = document.getElementById('table-body');
+
+		this.dataNews = [
+
+			{
+				link: "https://www.bhvr.com/dead-by-daylight-partners-with-titan-comics-to-release-first-comic-book/", 
+				text: "Спровоцировать интерес сообщества игры",
+				reason: "Краткое описание уже знакомого сюжета"
+		},
+			{
+				link: "https://www.cdprojekt.com/en/media/news/the-witcher-3-wild-hunt-arrives-on-next-gen-this-december/", 
+				text: "Привлечь новую и удержать нынешнюю аудиторитю",
+				reason: "Краткое и понятное описание"
+		},
+			{
+				link: "https://www.bhvr.com/dead-by-daylight-partners-with-titan-comics-to-release-first-comic-book/", 
+				text: "Спровоцировать интерес сообщества игры",
+				reason: "Краткое описание уже знакомого сюжета"
+		},
+			{
+				link: "https://www.bhvr.com/dead-by-daylight-partners-with-titan-comics-to-release-first-comic-book/", 
+				text: "Спровоцировать интерес сообщества игры",
+				reason: "Краткое описание уже знакомого сюжета"
+		},
+			{
+				link: "https://www.bhvr.com/dead-by-daylight-partners-with-titan-comics-to-release-first-comic-book/", 
+				text: "Спровоцировать интерес сообщества игры",
+				reason: "Краткое описание уже знакомого сюжета"
+		}
+		]
+
+
 	}
 
 	// Retrikeivng our news list from the localSto
 
 	displayNews() {
-		const items = this.newsList;
+		const items = this.dataNews;
 
-		console.log(this.newsList.length);
 
-		if (this.newsList.length === 0) {
+
+		if (this.dataNews.length === 0) {
 			this.mainContainer.style.display = 'none';
 		} else {
 			this.mainContainer.style.display = 'flex';
@@ -43,7 +74,7 @@ class News {
 	// Opening form and validating input fields, if one of the requirec fields are not filled, no data submission
 
 	handleForm() {
-		console.log(this.mainContainer);
+		
 
 		this.addNewsBtn.addEventListener('click', () => {
 			if (this.counter % 2 === 0) {
@@ -78,7 +109,7 @@ class News {
 						const data = {
 							link: linkValue,
 							text: textValue,
-							reason: textValue
+							reason: reasonValue
 						};
 
 						this.newsList = [ ...this.newsList, data ];
@@ -107,7 +138,7 @@ class News {
 	// Initializing app
 
 	run() {
-		this.handleForm();
+		// this.handleForm();
 		this.displayNews();
 	}
 }

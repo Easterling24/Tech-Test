@@ -30,7 +30,7 @@ header ul {
 
 header ul li {
 	list-style: none;
-	margin-right: 1.5rem;
+	margin-right: 1rem;
 }
 header ul li a {
 	color: #000;
@@ -245,7 +245,7 @@ a:hover {
 }
 
 table {
-	width: 800px;
+	width: 90%;
 	border-collapse: collapse;
 	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -253,14 +253,15 @@ table {
 }
 
 th {
-	padding: 15px;
+	padding: 8px;
 	background-color: #445a98;
 	color: #fff;
 }
 td {
-	padding: 15px;
+	padding: 8px;
 	background-color: rgba(255, 255, 255, 0.2);
 	color: #fff;
+	text-align: left;
 }
 
 h1 {
@@ -351,8 +352,14 @@ form button {
 		align-items: unset;
 	}
 
+	#main-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	table {
-		width: 100%;
+		width: 90%;
 	}
 
 	#add-news-btn {
